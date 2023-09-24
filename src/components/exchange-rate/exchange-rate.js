@@ -18,12 +18,11 @@ export const ExchangeRate = () => {
 
   useEffect(() => {
     loadRates();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [selectedSymbol]);
 
   useEffect(() => {
     const pollingCallback = () => {
-      console.log("Polling...");
       loadRates();
     };
 
@@ -40,7 +39,7 @@ export const ExchangeRate = () => {
     return () => {
       stopPolling();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [rateList]);
 
   const loadRates = () => {
