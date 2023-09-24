@@ -15,8 +15,7 @@ export const ExchangeRateHeader = ({
         </Grid>
         <Grid item sx={{ display: "flex", justifyContent: "end" }} xs={5}>
           <Typography sx={{ fontSize: 14 }} align="right">
-            Last update {lastUpdate && moment(lastUpdate).fromNow()} next update
-            will be at:{" "}
+            Last updated {lastUpdate && moment(lastUpdate).fromNow()}. Next update at:
             {moment(lastUpdate).add(updateFrequency, "ms").format("HH:mm")}
           </Typography>
         </Grid>

@@ -29,13 +29,12 @@ export const ExchangeRateConfirmationDialog = ({
       <DialogTitle>Change base symbol to {symbol}?</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-slide-description">
-          If you change a base symbol to <u>{symbol}</u> that shows the first
-          row and rate align to that.
+          Do you want to change the base symbol to <u>{symbol}</u>? The exchange rates will reload.
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Disagree</Button>
-        <Button onClick={onAgree}>Agree</Button>
+        <Button onClick={onClose}>No</Button>
+        <Button onClick={onAgree}>Yes</Button>
       </DialogActions>
     </Dialog>
   );
